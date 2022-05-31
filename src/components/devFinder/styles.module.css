@@ -2,10 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2.1rem;
+  margin-bottom: 2.3rem;
 }
 
 .container {
   width: 100%;
   max-width: var(--maxwidth);
+}
+
+.title {
+  font-size: 1.625rem;
 }
