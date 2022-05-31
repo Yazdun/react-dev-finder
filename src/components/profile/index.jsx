@@ -12,7 +12,7 @@ export const Profile = props => {
           <span className={css.login}>@{login}</span>
         </div>
         <span className={css.join}>
-          Joined <Moment format="D MMM YYYY" withTitle date={created_at} />
+          {/* Joined <Moment format="D MMM YYYY" withTitle date={created_at} /> */}
         </span>
       </div>
     </div>
