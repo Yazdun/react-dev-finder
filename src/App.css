@@ -31,6 +31,11 @@ main {
   min-height: 100vh;
   color: var(--clr-foreground-1);
   background-color: var(--clr-background-1);
+  transition: 0.3s background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
