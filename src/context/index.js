@@ -4,7 +4,10 @@ import useLocalStorage from 'use-local-storage'
 const ThemeContext = createContext()
 
 export function ThemeProvider({ children }) {
-  const defaultDark = window.matchMedia('(perfers-color-scheme: dark)').matches
+  const defaultDark =
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+
   const [theme, setTheme] = useLocalStorage(
     'theme',
     defaultDark ? 'dark' : 'light',
