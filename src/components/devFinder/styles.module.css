@@ -27,6 +27,7 @@
 
 .bio {
   color: var(--clr-foreground-2);
+  font-size: 0.813rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -34,6 +35,10 @@
     padding: 3rem;
     display: flex;
     gap: 2.25rem;
+  }
+
+  .bio {
+    font-size: 0.938;
   }
 
   .image {
