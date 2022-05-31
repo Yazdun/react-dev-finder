@@ -1,0 +1,12 @@
+.btn {
+  background-color: var(--clr-active);
+  width: 100%;
+  max-width: 6.625rem;
+  height: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+}
