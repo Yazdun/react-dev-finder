@@ -1,21 +1,8 @@
 import css from './styles.module.css'
 import { Socials, Theme, Search, Profile, Stats } from '../'
-import octocat from '../../mock/octocat.json'
+import user from '../../mocks/octocat.json'
 
 export const DevFinder = () => {
-  const {
-    login,
-    name,
-    created_at,
-    public_repos,
-    followers,
-    following,
-    location,
-    url,
-    company,
-    twitter_username,
-  } = octocat
-
   return (
     <div className={css.container}>
       <header className={css.header}>
@@ -24,9 +11,9 @@ export const DevFinder = () => {
       </header>
       <Search />
       <div className={css.card}>
-        <Profile />
-        <Stats />
-        <Socials />
+        <Profile {...user} />
+        <Stats {...user} />
+        <Socials {...user} />
       </div>
     </div>
   )

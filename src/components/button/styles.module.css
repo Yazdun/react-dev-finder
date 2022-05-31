@@ -9,4 +9,16 @@
   border-radius: 10px;
   font-weight: bold;
   color: white;
+  background-position: center;
+  transition: background 1.5s;
+}
+
+.btn:hover {
+  background: var(--clr-active)
+    radial-gradient(circle, transparent 1%, var(--clr-active) 1%) center/15000%;
+}
+.btn:active {
+  background-color: #4699f8;
+  background-size: 100%;
+  transition: background 0s;
 }

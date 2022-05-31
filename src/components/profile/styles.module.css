@@ -1,0 +1,31 @@
+.image {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.profile {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.profile span {
+  display: block;
+}
+
+.login {
+  color: var(--clr-active);
+  font-size: 0.813rem;
+  margin: 0.2rem 0;
+}
+
+.join {
+  font-size: 0.813rem;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: bold;
+}
