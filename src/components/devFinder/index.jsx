@@ -14,7 +14,9 @@ export const DevFinder = () => {
         <img src={user.avatar_url} alt={user.name} className={css.image} />
         <div>
           <Profile {...user} />
-          <p className={css.bio}>{user.bio}</p>
+          <p className={css.bio}>
+            {user.bio ? user.bio : 'This profile has no bio'}
+          </p>
           <Stats {...user} />
           <Socials {...user} />
         </div>

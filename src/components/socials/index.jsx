@@ -2,27 +2,38 @@ import css from './styles.module.css'
 import { IoLocationSharp, IoLogoTwitter } from 'react-icons/io5'
 import { RiBuilding2Fill } from 'react-icons/ri'
 import { BiLink } from 'react-icons/bi'
+import cn from 'classnames'
 
 export const Socials = props => {
   const { location, twitter_username, company, blog } = props
   return (
     <ul className={css.list}>
-      <li className={css.item}>
-        <IoLocationSharp />
-        <span>{location}</span>
-      </li>
-      <li className={css.item}>
-        <IoLogoTwitter />
-        <span>@{twitter_username}</span>
-      </li>
-      <li className={css.item}>
-        <BiLink />
-        <span>{blog}</span>
-      </li>
-      <li className={css.item}>
-        <RiBuilding2Fill />
-        <span>@{company}</span>
-      </li>
+      <Item icon={<IoLocationSharp />} info={location} />
+      <Item icon={<IoLogoTwitter />} info={twitter_username} atsign />
+      <Item icon={<BiLink />} info={blog} isLink />
+      <Item icon={<RiBuilding2Fill />} info={company} atsign />
     </ul>
+  )
+}
+
+const Item = ({ icon, info, atsign, isLink }) => {
+  const isExist = info || info.length > 0
+
+  if (isLink && isExist) {
+    return (
+      <li className={css.item}>
+        {icon}
+        <a href={info} target="_blank" rel="noreferrer">
+          {info.slice(0, 16) + '...'}
+        </a>
+      </li>
+    )
+  }
+
+  return (
+    <li className={cn(css.item, !isExist && css.disabled)}>
+      {icon}
+      <span>{isExist ? `${atsign ? '@' : ''}${info}` : 'Not Available'}</span>
+    </li>
   )
 }

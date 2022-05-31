@@ -18,7 +18,7 @@
   background-color: var(--clr-background-2);
   padding: 1rem;
   border-radius: var(--border-radius);
-  box-shadow: var(--boxshadow);
+  box-shadow: var(--bs-1);
 }
 
 .image {

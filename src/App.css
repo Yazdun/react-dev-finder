@@ -8,7 +8,8 @@
   --clr-foreground-2: #4b6a9b;
   --clr-foreground-3: #697c9a;
   --border-radius: 0.938rem;
-  --boxshadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  --bs-1: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  --bs-2: var(--clr-foreground-1) 0px 0px 0px 2px;
   --maxwidth: 45.625rem;
 }
 
@@ -19,7 +20,8 @@
   --clr-foreground-2: #ffffff;
   --clr-foreground-3: #ffffff;
 
-  --boxshadow: 0;
+  --bs-1: 0;
+  --bs-2: var(--clr-foreground-1) 0px 0px 0px 2px;
 }
 
 *,
@@ -80,6 +82,12 @@ select {
 svg {
   color: inherit;
 }
+
+button:focus-visible,
+a:focus-visible {
+  box-shadow: var(--bs-2) !important;
+}
+
 /* remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {
   *,

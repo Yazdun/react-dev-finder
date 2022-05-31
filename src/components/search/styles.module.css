@@ -1,15 +1,15 @@
 .search {
   width: 100%;
   background-color: var(--clr-background-2);
-  padding: 0.563rem;
   border-radius: var(--border-radius);
   margin-bottom: 1.5rem;
-  box-shadow: var(--boxshadow);
+  padding: 1rem;
+  box-shadow: var(--bs-1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .input {
@@ -35,6 +35,8 @@
 @media only screen and (min-width: 490px) {
   .search {
     flex-direction: row;
+    padding: 0.563rem;
+    gap: 1rem;
   }
 }
 
