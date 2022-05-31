@@ -7,6 +7,7 @@
   --clr-foreground-1: #2b3442;
   --clr-foreground-2: #4b6a9b;
   --clr-foreground-3: #697c9a;
+  --maxwidth: 45.625rem;
 }
 
 [data-theme='dark'] {
@@ -36,6 +37,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 1.313rem;
 }
 
 a {

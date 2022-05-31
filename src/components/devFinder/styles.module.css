@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--maxwidth);
+}
+
+.title {
+  font-size: 1.625rem;
+}
