@@ -11,9 +11,13 @@ export const DevFinder = () => {
       </header>
       <Search />
       <div className={css.card}>
-        <Profile {...user} />
-        <Stats {...user} />
-        <Socials {...user} />
+        <img src={user.avatar_url} alt={user.name} className={css.image} />
+        <div>
+          <Profile {...user} />
+          <p className={css.bio}>{user.bio}</p>
+          <Stats {...user} />
+          <Socials {...user} />
+        </div>
       </div>
     </div>
   )

@@ -21,8 +21,26 @@
   box-shadow: var(--boxshadow);
 }
 
+.image {
+  display: none;
+}
+
+.bio {
+  color: var(--clr-foreground-2);
+}
+
 @media only screen and (min-width: 768px) {
   .card {
     padding: 3rem;
+    display: flex;
+    gap: 2.25rem;
+  }
+
+  .image {
+    display: block;
+    border-radius: 50%;
+    height: 7.313rem;
+    width: 7.313rem;
+    object-fit: cover;
   }
 }
