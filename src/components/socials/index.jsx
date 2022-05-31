@@ -17,13 +17,13 @@ export const Socials = props => {
         isTwitter
       />
       <Item icon={<BiLink />} info={blog} isLink />
-      <Item icon={<RiBuilding2Fill />} info={company} atsign />
+      <Item icon={<RiBuilding2Fill />} info={company} />
     </ul>
   )
 }
 
 const Item = ({ icon, info, atsign, isLink, isTwitter }) => {
-  const isExist = info || info.length > 0
+  const isExist = info || info?.length > 0
 
   if (isLink && isExist) {
     return (

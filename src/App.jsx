@@ -1,9 +1,9 @@
 import './App.css'
 import { DevFinder } from './components'
-import { useTheme } from './context'
+import { useThemeContext } from './context'
 
 function App() {
-  const { theme } = useTheme()
+  const { theme } = useThemeContext()
 
   return (
     <main data-theme={theme}>

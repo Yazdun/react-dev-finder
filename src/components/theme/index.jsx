@@ -1,12 +1,12 @@
 import css from './styles.module.css'
-import { useTheme } from '../../context'
+import { useThemeContext } from '../../context'
 import { IoMdSunny } from 'react-icons/io'
 import { IoMoon } from 'react-icons/io5'
 import { motion, AnimatePresence } from 'framer-motion'
 import { framer_toggle } from './framer'
 
 export const Theme = () => {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useThemeContext()
 
   const switchTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
 

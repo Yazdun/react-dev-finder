@@ -1,8 +1,9 @@
 import css from './styles.module.css'
 import { Socials, Theme, Search, Profile, Stats } from '../'
-import user from '../../mocks/octocat.json'
+import { useAppContext } from '../../context'
 
 export const DevFinder = () => {
+  const { dev } = useAppContext()
   return (
     <div className={css.container}>
       <header className={css.header}>
@@ -11,14 +12,14 @@ export const DevFinder = () => {
       </header>
       <Search />
       <div className={css.card}>
-        <img src={user.avatar_url} alt={user.name} className={css.image} />
+        <img src={dev.avatar_url} alt={dev.name} className={css.image} />
         <div>
-          <Profile {...user} />
+          <Profile {...dev} />
           <p className={css.bio}>
-            {user.bio ? user.bio : 'This profile has no bio'}
+            {dev.bio ? dev.bio : 'This profile has no bio'}
           </p>
-          <Stats {...user} />
-          <Socials {...user} />
+          <Stats {...dev} />
+          <Socials {...dev} />
         </div>
       </div>
     </div>

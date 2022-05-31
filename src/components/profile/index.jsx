@@ -8,7 +8,7 @@ export const Profile = props => {
       <img className={css.image} src={avatar_url} alt={name} />
       <div className={css.info}>
         <div>
-          <h2 className={css.name}>{name}</h2>
+          <h2 className={css.name}>{name ? name : login}</h2>
           <span className={css.login}>@{login}</span>
         </div>
         <span className={css.join}>

@@ -1,12 +1,31 @@
-import { useContext, createContext } from 'react'
+import { useContext, createContext, useState } from 'react'
+import mockDev from '../mocks/octocat.json'
 import useLocalStorage from 'use-local-storage'
+import useFetch from 'use-http'
 
+const Endpoint = 'https://api.github.com/users'
 const AppContext = createContext()
 
 export function AppProvider({ children }) {
-  return <AppContext.Provider value={'hello'}>{children}</AppContext.Provider>
+  const prevDev = localStorage.getItem('dev')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [dev, setDev] = useLocalStorage('dev', prevDev ? prevDev : mockDev)
+  const { get, response, loading, error } = useFetch(Endpoint)
+
+  const handleSearch = async username => {
+    const newDev = await get(username)
+    if (response.ok) setDev(newDev)
+  }
+
+  return (
+    <AppContext.Provider
+      value={{ dev, handleSearch, setSearchTerm, searchTerm }}
+    >
+      {children}
+    </AppContext.Provider>
+  )
 }
 
-export function useApp() {
+export function useAppContext() {
   return useContext(AppContext)
 }
