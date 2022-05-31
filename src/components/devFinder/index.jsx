@@ -14,7 +14,7 @@ export const DevFinder = () => {
         <Theme />
       </header>
       <Search />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence exitBeforeEnter initial={false}>
         <DevCard key={dev.id} dev={dev} />
       </AnimatePresence>
     </motion.div>
