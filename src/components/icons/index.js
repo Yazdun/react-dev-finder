@@ -1,7 +1,0 @@
-export { CompanySvg } from './CompanySvg'
-export { LocationSvg } from './LocationSvg'
-export { MoonSvg } from './MoonSvg'
-export { SearchSvg } from './SearchSvg'
-export { SunSvg } from './SunSvg'
-export { TwitterSvg } from './TwitterSvg'
-export { WebsiteSvg } from './WebsiteSvg'
