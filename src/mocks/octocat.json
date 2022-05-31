@@ -19,7 +19,7 @@
   "site_admin": false,
   "name": "the octocat",
   "company": "GitHub",
-  "blog": "https://github.com/blog",
+  "blog": "https://github.blog",
   "location": "San Francisco",
   "email": "octocat@github.com",
   "hireable": false,
