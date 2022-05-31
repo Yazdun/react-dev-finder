@@ -1,16 +1,15 @@
-export const framer_toggle = {
+export const framer_card = {
   initial: {
-    y: '-100%',
     opacity: 0,
+    x: '-10%',
   },
   animate: {
-    y: 0,
-    scale: 1,
     opacity: 1,
+    x: '0%',
   },
   exit: {
-    y: '100%',
     opacity: 0,
+    x: '10%',
   },
   transition: { duration: 0.3 },
 }

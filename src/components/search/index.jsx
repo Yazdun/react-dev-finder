@@ -2,7 +2,6 @@ import css from './styles.module.css'
 import { Button } from '../'
 import { SearchSvg } from './SearchSvg'
 import { useAppContext } from '../../context'
-import { useState } from 'react'
 
 export const Search = () => {
   const { handleSearch, searchTerm, setSearchTerm } = useAppContext()
@@ -21,7 +20,9 @@ export const Search = () => {
           onChange={handleChange}
         />
       </div>
-      <Button onClick={() => handleSearch(searchTerm)}>Search</Button>
+      <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm}>
+        Search
+      </Button>
     </div>
   )
 }

@@ -34,7 +34,7 @@ const Item = ({ icon, info, atsign, isLink, isTwitter }) => {
           target="_blank"
           rel="noreferrer"
         >
-          {info.slice(0, 16) + '...'}
+          {info.length > 16 ? info.slice(0, 16) + '...' : info}
         </a>
       </li>
     )

@@ -9,7 +9,14 @@ export const Profile = props => {
       <div className={css.info}>
         <div>
           <h2 className={css.name}>{name ? name : login}</h2>
-          <span className={css.login}>@{login}</span>
+          <a
+            href={`https://github.com/${login}`}
+            target="_blank"
+            rel="noreferrer"
+            className={css.login}
+          >
+            @{login}
+          </a>
         </div>
         <span className={css.join}>
           Joined <Moment format="D MMM YYYY" withTitle date={created_at} />

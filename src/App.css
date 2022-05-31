@@ -47,6 +47,7 @@ main {
   align-items: center;
   justify-content: center;
   padding: 1.313rem;
+  overflow-x: hidden;
 }
 
 a {

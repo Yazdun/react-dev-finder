@@ -10,7 +10,7 @@ export function AppProvider({ children }) {
   const prevDev = localStorage.getItem('dev')
   const [searchTerm, setSearchTerm] = useState('')
   const [dev, setDev] = useLocalStorage('dev', prevDev ? prevDev : mockDev)
-  const { get, response, loading, error } = useFetch(Endpoint)
+  const { get, response, loading } = useFetch(Endpoint)
 
   const handleSearch = async username => {
     const newDev = await get(username)
@@ -19,7 +19,7 @@ export function AppProvider({ children }) {
 
   return (
     <AppContext.Provider
-      value={{ dev, handleSearch, setSearchTerm, searchTerm }}
+      value={{ dev, handleSearch, setSearchTerm, searchTerm, loading }}
     >
       {children}
     </AppContext.Provider>
