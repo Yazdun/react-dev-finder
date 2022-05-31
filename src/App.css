@@ -2,11 +2,13 @@
 
 :root {
   --clr-active: #0079ff;
-  --clr-background-1: #fefefe;
-  --clr-background-2: #f6f8ff;
+  --clr-background-1: #f6f8ff;
+  --clr-background-2: #fefefe;
   --clr-foreground-1: #2b3442;
   --clr-foreground-2: #4b6a9b;
   --clr-foreground-3: #697c9a;
+  --border-radius: 0.938rem;
+  --boxshadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
   --maxwidth: 45.625rem;
 }
 
@@ -14,6 +16,7 @@
   --clr-background-1: #141d2f;
   --clr-background-2: #1e2a47;
   --clr-foreground-1: #ffffff;
+  --boxshadow: 0;
 }
 
 *,
@@ -22,6 +25,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.3s background;
 }
 
 body {

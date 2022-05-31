@@ -1,0 +1,8 @@
+.search {
+  width: 100%;
+  background-color: var(--clr-background-2);
+  padding: 0.625rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--boxshadow);
+}
