@@ -14,9 +14,9 @@ export const Theme = () => {
     <button onClick={switchTheme}>
       <AnimatePresence exitBeforeEnter initial={false}>
         {theme === 'light' ? (
-          <ThemeState icon={<IoMdSunny />} text="light" key="light" />
+          <ThemeState icon={<IoMdSunny />} text="dark" key="light" />
         ) : (
-          <ThemeState icon={<IoMoon />} text="dark" key="dark" />
+          <ThemeState icon={<IoMoon />} text="light" key="dark" />
         )}
       </AnimatePresence>
     </button>
@@ -25,9 +25,9 @@ export const Theme = () => {
 
 const ThemeState = ({ text, icon }) => {
   return (
-    <motion.div {...framer_toggle} className={css.state}>
+    <motion.span {...framer_toggle} className={css.state}>
       {text}
       {icon}
-    </motion.div>
+    </motion.span>
   )
 }

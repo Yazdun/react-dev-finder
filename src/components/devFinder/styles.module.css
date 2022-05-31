@@ -13,3 +13,16 @@
 .title {
   font-size: 1.625rem;
 }
+
+.card {
+  background-color: var(--clr-background-2);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--boxshadow);
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    padding: 3rem;
+  }
+}
