@@ -1,15 +1,18 @@
 import { AnimatePresence } from 'framer-motion'
 import './App.css'
-import { DevFinder } from './components'
+import { Alert, DevFinder } from './components'
 import { useAppContext, useThemeContext } from './context'
 
 function App() {
   const { theme } = useThemeContext()
-  const { dev } = useAppContext()
+  const { error } = useAppContext()
 
   return (
     <main data-theme={theme}>
       <DevFinder />
+      <AnimatePresence exitBeforeEnter initial={false}>
+        {error && <Alert />}
+      </AnimatePresence>
     </main>
   )
 }
