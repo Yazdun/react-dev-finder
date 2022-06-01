@@ -1,6 +1,6 @@
 .list {
   display: grid;
-  gap: 1.125rem;
+  gap: 1.5rem;
 }
 
 .item {

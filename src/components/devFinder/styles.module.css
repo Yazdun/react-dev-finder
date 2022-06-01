@@ -8,7 +8,6 @@
 .container {
   width: 100%;
   max-width: var(--maxwidth);
-  margin-bottom: 1.5rem;
 }
 
 .title {

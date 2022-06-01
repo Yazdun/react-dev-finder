@@ -5,15 +5,23 @@ export const Profile = props => {
   const { login, name, created_at, avatar_url } = props
   return (
     <div className={css.profile}>
-      <img className={css.image} src={avatar_url} alt={name} />
+      <img
+        className={css.image}
+        src={avatar_url}
+        alt={name}
+        data-testid="profile-image"
+      />
       <div className={css.info}>
         <div>
-          <h2 className={css.name}>{name ? name : login}</h2>
+          <h2 className={css.name} data-testid="profile-title">
+            {name ? name : login}
+          </h2>
           <a
             href={`https://github.com/${login}`}
             target="_blank"
             rel="noreferrer"
             className={css.login}
+            data-testid="profile-github-link"
           >
             @{login}
           </a>
