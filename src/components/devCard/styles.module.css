@@ -14,6 +14,10 @@
   font-size: 0.813rem;
 }
 
+.content {
+  width: 100%;
+}
+
 @media only screen and (min-width: 768px) {
   .card {
     padding: 3rem;

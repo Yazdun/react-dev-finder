@@ -12,7 +12,7 @@ export const DevCard = ({ dev }) => {
         className={css.image}
         data-testid="dev-card-image"
       />
-      <div>
+      <div className={css.content}>
         <Profile {...dev} />
         <p className={css.bio} data-testid="dev-card-bio">
           {dev.bio ? dev.bio : 'This profile has no bio'}
