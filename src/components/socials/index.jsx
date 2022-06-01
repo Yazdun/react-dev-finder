@@ -43,7 +43,13 @@ const Item = ({ icon, info, atsign, isLink, isTwitter }) => {
   return (
     <li className={cn(css.item, !isExist && css.disabled)}>
       {icon}
-      <span>{isExist ? `${atsign ? '@' : ''}${info}` : 'Not Available'}</span>
+      <span>
+        {isExist
+          ? `${atsign ? '@' : ''}${
+              info.length > 16 ? info.slice(0, 16) + '...' : info
+            }`
+          : 'Not Available'}
+      </span>
     </li>
   )
 }
