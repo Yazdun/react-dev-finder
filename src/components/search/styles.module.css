@@ -36,7 +36,7 @@
   .search {
     flex-direction: row;
     padding: 0.563rem;
-    /* margin-bottom: 2rem; */
+    margin-bottom: 2rem;
   }
 }
 
