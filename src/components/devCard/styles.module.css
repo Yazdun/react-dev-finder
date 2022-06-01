@@ -16,9 +16,7 @@
 
 @media only screen and (min-width: 768px) {
   .card {
-    padding-inline: 3rem;
-    /* padding-block: 3.4rem; */
-    padding-block: 3.2rem;
+    padding: 3rem;
     display: flex;
     gap: 2.25rem;
   }
